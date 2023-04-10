@@ -6,7 +6,7 @@ from sklearn.metrics import accuracy_score, f1_score
 from transformers import TrainingArguments, Trainer
 from transformers import BertTokenizer, BertForSequenceClassification
 
-dataset = pd.read_csv("/Users/shayanshabani/Downloads/twitter_MBTI.csv")
+dataset = pd.read_csv("C:/Users/willi/Downloads/twitter_MBTI.csv")
 dataset = dataset[['text', 'label']]
 label_map = {"intj": 0, "intp": 1, "entj": 2, "entp": 3, "infj": 4, "infp": 5, "enfj": 6, "enfp": 7,
              "istj": 8, "isfj": 9, "estj": 10, "esfj": 11, "istp": 12, "isfp": 13, "estp": 14, "esfp": 15}
