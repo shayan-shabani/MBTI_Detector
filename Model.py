@@ -15,6 +15,7 @@ dataset = dataset[0:7000]
 
 tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
 model = BertForSequenceClassification.from_pretrained('bert-base-uncased', num_labels=16)
+model = model.to("cuda")
 
 X = list(dataset["text"])
 y = list(dataset["label"])
